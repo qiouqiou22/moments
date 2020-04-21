@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="one.view.FriendsListController">
+   <children>
+      <SplitPane dividerPositions="0.3258145363408521" layoutX="268.0" layoutY="174.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.6241610738255033" layoutX="48.0" layoutY="136.0" orientation="VERTICAL" prefHeight="598.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="502.0" prefWidth="254.0">
+                           <children>
+                              <TableView fx:id="friendstable" layoutY="45.0" prefHeight="368.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn id="NameColumn" fx:id="NameColumn" prefWidth="75.0" text="Name" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Button layoutX="144.0" layoutY="182.0" mnemonicParsing="false" onAction="#searchfriends" text="New Friends" />
+                              <Button layoutX="156.0" layoutY="85.0" mnemonicParsing="false" onAction="#Addfriends" text="Add" />
+                              <ImageView fx:id="usericon" fitHeight="119.0" fitWidth="127.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="username" layoutX="145.0" layoutY="26.0" text="Username">
+                                 <font>
+                                    <Font name="Dubai Bold" size="23.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0" startX="0.33980582524271846" startY="0.3058252427184466">
+                                       <stops>
+                                          <Stop color="#43b292" />
+                                          <Stop color="#43b292" offset="0.31521739130434784" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill></Label>
+                              <TextField fx:id="searchfriendField" layoutX="14.0" layoutY="142.0" />
+                              <Button layoutX="51.0" layoutY="182.0" mnemonicParsing="false" onAction="#Deletefriends" text="delete" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Pane layoutY="14.0" prefHeight="598.0" prefWidth="534.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="songimage" fitHeight="200.0" fitWidth="201.0" layoutX="27.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextField fx:id="commentinp" layoutX="27.0" layoutY="527.0" prefHeight="31.0" prefWidth="422.0" />
+                        <Button layoutX="468.0" layoutY="527.0" mnemonicParsing="false" onAction="#addcomments" text="Send" />
+                        <Label fx:id="songname" layoutX="237.0" layoutY="99.0" prefHeight="21.0" prefWidth="147.0" textFill="#36abcfea">
+                           <font>
+                              <Font size="29.0" />
+                           </font></Label>
+                        <Label layoutX="238.0" layoutY="44.0" text="Song Name:">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.558252427184466" startY="0.3106796116504854">
+                                 <stops>
+                                    <Stop color="#da3131" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font size="27.0" />
+                           </font></Label>
+                        <ToggleButton fx:id="play" layoutX="249.0" layoutY="171.0" mnemonicParsing="false" onAction="#playsong" text="Play">
+                           <font>
+                              <Font size="19.0" />
+                           </font></ToggleButton>
+                        <TextFlow fx:id="commentplace" layoutX="27.0" layoutY="264.0" prefHeight="228.0" prefWidth="462.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

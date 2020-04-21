@@ -1,0 +1,16 @@
+#friendstable {
+	-fx-background-image: url("/src/icon/background1.jpg");
+}
+#newfriends{
+	-fx-background-image: url("/src/icon/magnifying-glass.png");
+	
+}
+#addFrinds{
+	-fx-background-image: url("/src/icon/heart1.png");
+}
+#sendcomment{
+	-fx-background-image: url("/src/icon/send.png");
+}
+#pane{
+	-fx-background-image: url("/src/icon/background2.jpg");
+}
